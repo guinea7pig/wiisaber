@@ -21,7 +21,7 @@ int main(void) {
 		 break;
 	}
 
-        GRRLIB_texImg * GRRLIB_LoadTextureFromFile (const char *filename)	
+	GRRLIB_texImg* GRRLIB_LoadTextureFromFile();	
 
  	GRRLIB_Printf(5, 
 		25,
