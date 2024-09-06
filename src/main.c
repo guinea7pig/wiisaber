@@ -20,7 +20,8 @@ int main(void) {
         if (WPAD_ButtonsDown(0) & WPAD_BUTTON_HOME) {
 		 break;
 	}
-GRRLIB_texIMG *BMfont3.png = GRRLIB_LoadTextureFromFile("BMfont3.png");
+        GRRLIB_texIMG *BMfont3.png = GRRLIB_LoadTextureFromFile("BMfont3.png");
+        GRRLIB_FILLSCREEN(0x000000FF)
 	    
  	GRRLIB_Printf(5, 
 		25,
