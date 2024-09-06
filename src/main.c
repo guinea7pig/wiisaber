@@ -21,6 +21,8 @@ int main(void) {
 		 break;
 	}
 
+        GRRLIB_texImg * GRRLIB_LoadTextureFromFile (const char *filename)	
+
  	GRRLIB_Printf(5, 
 		25,
 		// --need to add own images for our font!
