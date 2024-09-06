@@ -5,7 +5,7 @@
 #include <malloc.h>
 
 #include <wiiuse/wpad.h>
-
+#define WHITE 0xfffff
 int main(void) {
     // Initialise the Graphics & Video subsystem
     GRRLIB_Init();
@@ -20,13 +20,12 @@ int main(void) {
         if (WPAD_ButtonsDown(0) & WPAD_BUTTON_HOME) {
 		 break;
 	}
-
-        GRRLIB_texImg * GRRLIB_LoadTextureFromFile (const char *filename)	
-
+GRRLIB_texIMG *BMfont3.png = GRRLIB_LoadTextureFromFile("BMfont3.png");
+	    
  	GRRLIB_Printf(5, 
 		25,
 		// --need to add own images for our font!
-		GRRLIB_WHITE, 
+		WHITE, 
 		1,
 		 "wiisaber is a clone of beatsaber ");
 
