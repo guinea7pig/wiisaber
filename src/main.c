@@ -21,6 +21,7 @@ int main(void) {
 		 break;
 	}
 GRRLIB_texIMG *BMfont3.png = GRRLIB_LoadTextureFromFile("BMfont3.png");
+GRRLIB_SetBackgroundColour(0000000f)//this might be wrong 
 	    
  	GRRLIB_Printf(5, 
 		25,
