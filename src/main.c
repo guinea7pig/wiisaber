@@ -30,6 +30,13 @@ GRRLIB_SetBackgroundColour(0000000f)//this might be wrong
 		1,
 		 "wiisaber is a clone of beatsaber ");
 
+	    GRRLIB_Printf(5, 
+		0,
+		// --need to add own images for our font!
+		WHITE, 
+		1,
+		 "© toadrage and guinea7pig 2024");
+
          
 	GRRLIB_Render();  // Render the frame buffer to the screen
     }
