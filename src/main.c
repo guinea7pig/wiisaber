@@ -1,16 +1,28 @@
-#include <grrlib.h>
+/*
+	
+	main.c - Main source file.
 
+*/
+
+#include <stdio.h>
+#include <stdint.h>
 #include <stdlib.h>
-#include <math.h>
-#include <malloc.h>
+// #include <malloc.h>
 
+#include <grrlib.h>
 #include <wiiuse/wpad.h>
-#define WHITE 0xfffff
+
+#define WHITE 0xFFFF
+// #include "imgload.h"
+
 int main(void) {
     // Initialise the Graphics & Video subsystem
     GRRLIB_Init();
 
     WPAD_Init();
+	
+    // load_img(); // called from imgload.h
+
 
     while(1) {
 
@@ -18,10 +30,9 @@ int main(void) {
 
         // If [HOME] was pressed on a Wiimote, break out of the loop
         if (WPAD_ButtonsDown(0) & WPAD_BUTTON_HOME) {
-		 break;
+		 exit(1);
 	}
-GRRLIB_texIMG *BMfont3.png = GRRLIB_LoadTextureFromFile("BMfont3.png");
-	    
+    
  	GRRLIB_Printf(5, 
 		25,
 		// --need to add own images for our font!
