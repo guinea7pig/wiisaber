@@ -32,13 +32,10 @@ int main(void) {
         if (WPAD_ButtonsDown(0) & WPAD_BUTTON_HOME) {
 		 exit(1);
 	}
-<<<<<<< HEAD
-    
-=======
-GRRLIB_texIMG *BMfont3.png = GRRLIB_LoadTextureFromFile("BMfont3.png");
-GRRLIB_SetBackgroundColour(0000000f)//this might be wrong 
 	    
->>>>>>> d072859838e970eb4ca2aed3ddc2f97a6cf5f703
+	GRRLIB_texIMG *BMfont3.png = GRRLIB_LoadTextureFromFile("BMfont3.png");
+	GRRLIB_SetBackgroundColour(0000000f)//this might be wrong 
+	
  	GRRLIB_Printf(5, 
 		25,
 		// --need to add own images for our font!
