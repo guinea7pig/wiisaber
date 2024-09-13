@@ -13,7 +13,7 @@
 #include <wiiuse/wpad.h>
 
 #define WHITE 0xFFFF
-#include "imgload.h"
+#include "imgload.h"  //do in need to put my font png there
 
 int main(void) {
     // Initialise the Graphics & Video subsystems
@@ -23,7 +23,7 @@ int main(void) {
 	
     load_img(); // called from imgload.h
 
-GRRLIB_texImg *tex_BMfont4 = GRRLIB_LoadTexture(//add own texture here);
+   GRRLIB_texImg *tex_BMfont4 = GRRLIB_LoadTexture(//add own texture here);
 
 
     while(1) {
@@ -41,14 +41,14 @@ GRRLIB_texImg *tex_BMfont4 = GRRLIB_LoadTexture(//add own texture here);
 	
  	GRRLIB_Printf(5, 
 		25,
-		// --need to add own images for our font!
+		BMfont3.png,
 		WHITE, 
 		1,
 		 "wiisaber is a clone of beatsaber ");
 
 	    GRRLIB_Printf(5, 
 		0,
-		// --need to add own images for our font!
+		BMfont3.png
 		WHITE, 
 		1,
 		 "© toadrage and guinea7pig 2024");
