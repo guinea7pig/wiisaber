@@ -24,7 +24,6 @@ int main(void) {
     load_img(); // called from imgload.h
 
 GRRLIB_texImg *tex_BMfont4 = GRRLIB_LoadTexture(//add own texture here);
-    GRRLIB_InitTileSet(tex_BMfont4, 16, 16, 32); //i thinks this intilats this but idk why tile
 
 
     while(1) {
