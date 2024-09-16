@@ -3,10 +3,8 @@
 #include <math.h>
 #include <stdint.h>
 
-GRRLIB_init();
+#include <wiiuse/wpad.h>
 
-GRRLIB_ObjectViewBegin();
-GRRLIB_ObjectView(0, 0, 0, 0, 0, 0, 1, 1, 1);
-GRRLIB_DrawTorus(1, 1, 2048, 10, false, /* color */);
-
-
+void rotate(u32 channel) {
+	WPADData data = WPAD_Data(channel);
+	
