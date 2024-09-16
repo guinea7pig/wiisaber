@@ -37,7 +37,7 @@ int main(void) {
 	    
 	/* image loading is handled from "imgload.h" */
 	
-	GRRLIB_SetBackgroundColour(0000000f); 		//should be rgba 			//this might be wrong 
+	GRRLIB_SetBackgroundColour(0x000000FF); 		//should be rgba 			//this might be wrong 
 	
  	GRRLIB_Printf(5, 
 		25,
