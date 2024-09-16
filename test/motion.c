@@ -1,2 +1,3 @@
 //for the motion controls
-#include <wiiuse.h>
+#include <wiiuse/wpad.h>
+
