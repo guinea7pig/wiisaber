@@ -15,4 +15,5 @@ void testmotion()
 {
 //make it print the yaw,rool and pitch vales to test
 //hopefully grrlib supports yaw,rool and pitch for 3d objects
+printf(orient)//me thinks this is how it works
 }
