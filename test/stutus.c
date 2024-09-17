@@ -1,7 +1,7 @@
 #include <wiiuse.h>
 //stole this from the examplees page from the wiiuse github shoulf rewrite t
 void handle_ctrl_status(struct wiimote_t* wm) {
-	printf("\n\n--- CONTROLLER STATUS [wiimote id %i] ---\n", wm->unid);
+	print("\n\n--- CONTROLLER STATUS [wiimote id %i] ---\n", wm->unid);
 
 	printf("attachment:      %i\n", wm->exp.type);
 	printf("speaker:         %i\n", WIIUSE_USING_SPEAKER(wm));
