@@ -1,6 +1,7 @@
 //for the motion controls
 #include <wiiuse/wpad.h>
 #include <wiiuse/wiiuse.h>
+//what wiiiuse thing would be motion controls
 
 #include <stdint.h>
 #include <stdio.h>
