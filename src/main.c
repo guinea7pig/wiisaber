@@ -45,7 +45,12 @@ int main(void) {
 	
 		GRRLIB_SetBackgroundColour(0x000000FF); 		//should be rgba
 	        
-		GRRLIB_PrintfTTF()//should print throught ttf font me needs to add stuff later
+		GRRLIB_PrintfTTF(5,
+			0,
+			BeonMedium-7Z34.ttf
+			,"beon font test",
+			1,
+			WHITE) //difrnt order of thing from reagular print wired
 
  		GRRLIB_Printf(5, 
 			25,
