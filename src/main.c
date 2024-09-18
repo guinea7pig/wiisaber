@@ -1,7 +1,7 @@
 /*
 	
 	main.c - Main source file.
-assets/BeonMedium-7Z34.ttf
+
 */
 
 #include <stdio.h>
@@ -26,6 +26,7 @@ int main(void) {
     	load_img(); // called from imgload.h
 
    	GRRLIB_texImg *tex_BMfont4 = GRRLIB_LoadTexture(/* add own texture here */);
+	GRRLIB_LoadTTFFromFile(assets/BeonMedium-7Z34.ttf);
 
 
     	while(1) {
