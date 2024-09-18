@@ -2,6 +2,9 @@
 	
 	main.c - Main source file.
 
+  	Sep 2024, Ryan Murphy, (rehmurphy@gmail.com)
+   	Sep 2024, guinea7pig
+
 */
 
 #include <stdio.h>
