@@ -41,7 +41,9 @@ int main(void) {
 	/* image loading is handled from "imgload.h" */
 	
 		GRRLIB_SetBackgroundColour(0x000000FF); 		//should be rgba
-	
+	        
+		GRRLIB_PrintfTTF()//should print throught ttf font me needs to add stuff later
+
  		GRRLIB_Printf(5, 
 			25,
 			tex_BMfont3,
