@@ -50,7 +50,7 @@ int main(void) {
 			BeonMedium-7Z34.ttf
 			,"beon font test",
 			1,
-			WHITE) //difrnt order of thing from reagular print wired
+			WHITE); //difrnt order of thing from reagular print wired
 
  		GRRLIB_Printf(5, 
 			25,
