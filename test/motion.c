@@ -1,3 +1,10 @@
+/*
+printf("wiimote roll  = %f [%f]\n", wm->orient.roll, wm->orient.a_roll);
+		printf("wiimote pitch = %f [%f]\n", wm->orient.pitch, wm->orient.a_pitch);
+		printf("wiimote yaw   = %f\n", wm->orient.yaw);
+
+we should include somthing like this. this is taken directly from the wiiuse exsamples
+/* 
 //for the motion controls
 #include <wiiuse/wpad.h>
 #include <wiiuse/wiiuse.h>
