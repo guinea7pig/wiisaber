@@ -1,5 +1,5 @@
 //
-//printf("wiimote roll  = %f [%f]\n", wm->orient.roll, wm->orient.a_roll);
+//              printf("wiimote roll  = %f [%f]\n", wm->orient.roll, wm->orient.a_roll);
 //		printf("wiimote pitch = %f [%f]\n", wm->orient.pitch, wm->orient.a_pitch);
 //		printf("wiimote yaw   = %f\n", wm->orient.yaw);
 
