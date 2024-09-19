@@ -13,7 +13,8 @@ int main(void) {
 
 	GRRLIB_Init();
 	
-    	load_img(); 
+  load_img(); 
+  GRRLIB_LoadTexture(pixil-frame-0.png)
 
   GRRLIB_texImg *tex_BMfont4 = GRRLIB_LoadTexture(/* add own texture here */);
 	GRRLIB_LoadTTFFromFile(assets/BeonMedium-7Z34.ttf);
