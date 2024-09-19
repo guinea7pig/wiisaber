@@ -6,8 +6,8 @@
 #include <grrlib.h>
 #include "imgload.h"
 #include "wiiuse/WPAD.h"
-
-		    ///pixil-frame-0.png
+define cursor_x = 130 //trying to make a varbly proababy did this horibly wrong 
+		
 
 
 int main(void) {
@@ -24,7 +24,7 @@ int main(void) {
 	GRRLIB_SetBackgroundColour(0x000000FF);//frick the actull maib menu is a graidint 
 	GRRLIB_PrintfTTF(50,160,BeonMedium-7Z34.ttf,"WII",1,ff0000);//need to change this to red
   	GRRLIB_PrintfTTF(50,155,BeonMedium-7Z34.ttf,"SABER",1,00fff);//need to change this to bluw
-	GRRLIB_DrawImg()
+	GRRLIB_DrawImg(50,130,pixil-frame-0.png,180,1,1,ff0000)
 
     //this doesent use ttf
  		GRRLIB_Printf(50,130,tex_BMfont3,WHITE, 1,"play ");
@@ -38,4 +38,15 @@ int main(void) {
 
     	GRRLIB_Exit(); 	// Be a good boy, clear the memory allocated by GRRLIB
 	
+}
+
+int control(void) {
+WPAD_INIT()//this should inate wpad me think
+if(IS_PRESSED(WPAD,WIIMOTE_BUTTON_UP)){
+cursor_x=//next menu tex x 
+}
+
+if(IS_PRESSED(WPAD,WIIMOTE_BUTTON_A && cursor_x=130)){ //see what i mean about messy code
+//whaever intates the start
+}	
 }
