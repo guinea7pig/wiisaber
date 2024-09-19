@@ -6,7 +6,8 @@
 #include <grrlib.h>
 #include "imgload.h"
 
-		    
+		    ///pixil-frame-0.png
+
 
 int main(void) {
 
