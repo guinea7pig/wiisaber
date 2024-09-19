@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <grrlib.h>
 #include "imgload.h"
+#include "wiiuse/WPAD.h"
 
 		    ///pixil-frame-0.png
 
@@ -20,9 +21,10 @@ int main(void) {
 	GRRLIB_LoadTTFFromFile(assets/BeonMedium-7Z34.ttf);
   
 	  //y valus are just estimates same with x valus
-		GRRLIB_SetBackgroundColour(0x000000FF);//frick the actull maib menu is a graidint 
-		GRRLIB_PrintfTTF(50,160,BeonMedium-7Z34.ttf,"WII",1,ff0000);//need to change this to red
+	GRRLIB_SetBackgroundColour(0x000000FF);//frick the actull maib menu is a graidint 
+	GRRLIB_PrintfTTF(50,160,BeonMedium-7Z34.ttf,"WII",1,ff0000);//need to change this to red
   	GRRLIB_PrintfTTF(50,155,BeonMedium-7Z34.ttf,"SABER",1,00fff);//need to change this to bluw
+	GRRLIB_DrawImg()
 
     //this doesent use ttf
  		GRRLIB_Printf(50,130,tex_BMfont3,WHITE, 1,"play ");
