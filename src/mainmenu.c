@@ -53,18 +53,44 @@ WPAD_INIT()//this should inate wpad me think
 WPAD_SCAN	
 if(IS_PRESSED(WPAD,WIIMOTE_BUTTON_UP&&cursor_stage==0)){
 cursor_y=130//next menu tex x 
+cursorstage=0
 }
-f(IS_PRESSED(WPAD,WIIMOTE_BUTTON_UP&&cursor_stage==1)){
+(IS_PRESSED(WPAD,WIIMOTE_BUTTON_UP&&cursor_stage==1)){
 cursor_y=130//next menu tex x 
+cursorstage=0	
 }
 
-f(IS_PRESSED(WPAD,WIIMOTE_BUTTON_UP&&cursor_stage==2)){
+(IS_PRESSED(WPAD,WIIMOTE_BUTTON_UP&&cursor_stage==2)){
 cursor_y=100//next menu tex x 
+cursorstage=1
+}
+
+(IS_PRESSED(WPAD,WIIMOTE_BUTTON_DOWN && cursor_stage==0)){
+cursor_y=100//next menu tex x
+cursorstage=1
+}
+
+(IS_PRESSED(WPAD,WIIMOTE_BUTTON_DOWN && cursor_stage==1)){
+cursor_y=70//next menu tex x
+cursorstage=2
+}
+(IS_PRESSED(WPAD,WIIMOTE_BUTTON_DOWN && cursor_stage==1)){
+cursor_y=70//next menu tex x
+cursorstage=2
 }
 	
 
 
-if(IS_PRESSED(WPAD,WIIMOTE_BUTTON_A && cursor_stage=130)){ //see what i mean about messy code
+if(IS_PRESSED(WPAD,WIIMOTE_BUTTON_A && cursor_stage=0)){ //see what i mean about messy code
 //whaever intates the start
 }
+
+if(IS_PRESSED(WPAD,WIIMOTE_BUTTON_A && cursor_stage=1)){ //see what i mean about messy code
+//settings
+}	
+
+if(IS_PRESSED(WPAD,WIIMOTE_BUTTON_A && cursor_stage=2)){ //see what i mean about messy code
+//quir
+}
+}	
 }
