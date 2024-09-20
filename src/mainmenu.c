@@ -6,8 +6,8 @@
 #include <grrlib.h>
 #include "imgload.h"
 #include "wiiuse/WPAD.h"
-#define cursor_y = 130 //trying to make a varbly proababy did this horibly wrong 
-#define cursor_stage=0 //starts at play 
+define cursor_y = 130 //trying to make a varbly proababy did this horibly wrong 
+define cursor_stage=0  //starts at 0=play 1=setting 2=exit
 		
 
 
@@ -31,6 +31,9 @@ int main(void) {
  		GRRLIB_Printf(50,130,tex_BMfont3,WHITE, 1,"play ");
 	 	GRRLIB_Printf(50,100,tex_BMfont3,WHITE, 1,"settings ");
 	        GRRLIB_Printf(50,70,tex_BMfont3,WHITE, 1,"exit ");
+	        print("debug")
+		printf(cursory)
+	        printf(cursorstage)
 
 
 
@@ -47,11 +50,21 @@ int main(void) {
 
 int control(void) {
 WPAD_INIT()//this should inate wpad me think
-if(IS_PRESSED(WPAD,WIIMOTE_BUTTON_UP)){
-cursor_y=//next menu tex x 
+WPAD_SCAN	
+if(IS_PRESSED(WPAD,WIIMOTE_BUTTON_UP&&cursor_stage==0)){
+cursor_y=130//next menu tex x 
+}
+f(IS_PRESSED(WPAD,WIIMOTE_BUTTON_UP&&cursor_stage==1)){
+cursor_y=130//next menu tex x 
 }
 
-if(IS_PRESSED(WPAD,WIIMOTE_BUTTON_A && cursor_x=130)){ //see what i mean about messy code
+f(IS_PRESSED(WPAD,WIIMOTE_BUTTON_UP&&cursor_stage==2)){
+cursor_y=100//next menu tex x 
+}
+	
+
+
+if(IS_PRESSED(WPAD,WIIMOTE_BUTTON_A && cursor_stage=130)){ //see what i mean about messy code
 //whaever intates the start
-}	
+}
 }
