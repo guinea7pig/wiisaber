@@ -6,7 +6,7 @@
 #include <grrlib.h>
 #include "imgload.h"
 #include "wiiuse/WPAD.h"
-define cursor_x = 130 //trying to make a varbly proababy did this horibly wrong 
+define cursor_y = 130 //trying to make a varbly proababy did this horibly wrong 
 		
 
 
@@ -24,10 +24,14 @@ int main(void) {
 	GRRLIB_SetBackgroundColour(0x000000FF);//frick the actull maib menu is a graidint 
 	GRRLIB_PrintfTTF(50,160,BeonMedium-7Z34.ttf,"WII",1,ff0000);//need to change this to red
   	GRRLIB_PrintfTTF(50,155,BeonMedium-7Z34.ttf,"SABER",1,00fff);//need to change this to bluw
-	GRRLIB_DrawImg(50,130,pixil-frame-0.png,180,1,1,ff0000)
+	GRRLIB_DrawImg(50,cursor_y,pixil-frame-0.png,180,1,1,ff0000)
 
     //this doesent use ttf
  		GRRLIB_Printf(50,130,tex_BMfont3,WHITE, 1,"play ");
+	 	GRRLIB_Printf(50,100,tex_BMfont3,WHITE, 1,"settings ");
+	        GRRLIB_Printf(50,70,tex_BMfont3,WHITE, 1,"exit ");
+
+
 
 	   GRRLIB_Printf(5, 0,tex_BMfont3,WHITE,1,"© toadrage and guinea7pig 2024"); // Might replace this with a license boilerplate. //same as main.c
 
@@ -43,7 +47,7 @@ int main(void) {
 int control(void) {
 WPAD_INIT()//this should inate wpad me think
 if(IS_PRESSED(WPAD,WIIMOTE_BUTTON_UP)){
-cursor_x=//next menu tex x 
+cursor_y=//next menu tex x 
 }
 
 if(IS_PRESSED(WPAD,WIIMOTE_BUTTON_A && cursor_x=130)){ //see what i mean about messy code
