@@ -6,7 +6,8 @@
 #include <grrlib.h>
 #include "imgload.h"
 #include "wiiuse/WPAD.h"
-define cursor_y = 130 //trying to make a varbly proababy did this horibly wrong 
+#define cursor_y = 130 //trying to make a varbly proababy did this horibly wrong 
+#define cursor_stage=0 //starts at play 
 		
 
 
