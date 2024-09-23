@@ -34,6 +34,7 @@ int main(void) {
 	        print("debug")
 		printf(cursory)
 	        printf(cursorstage)
+	//setting up for ir controls
 
 
 
