@@ -34,7 +34,10 @@ int main(void) {
 	        print("debug")
 		printf(cursory)
 	        printf(cursorstage)
-	//setting up for ir controls
+    //setting up for ir controls
+      GRRLIB_LoadTexture(pixil-frame-0.png)//needs to replace with cursor
+
+	
 
 
 
