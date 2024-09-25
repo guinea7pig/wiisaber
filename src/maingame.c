@@ -10,6 +10,7 @@ void main()
 GX_init();
 GX_SetViewport(0, 0, 680, 480);
 GX_SetScissor(0,0,680,480)
+GXSetProjection(mtx, GX_PERSPECTIVE)
 }
 
 void_render()
