@@ -7,13 +7,17 @@ int pitch=0
 int time
 void main()
 {
-GRRLIB_Camera3dSettings()
-GRRLIB_3dmode()g
-GRRLIB_ObjectView(480,50,10,roll,pitch,yaw,1,1,1);//i think this applys to the model drawn with gx
-GX_BEGIN()
-
-GX_END()
+GX_init();
+GX_SetViewport(0, 0, 680, 480);
+GX_SetScissor(0,0,680,480)
 }
+
+void_render()
+{
+GX_Clearvtx()//me thiks
+GX_flush()//this should send stuff to the gpu
+}
+
 
 void time()
 
