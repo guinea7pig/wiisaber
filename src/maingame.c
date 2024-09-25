@@ -7,7 +7,7 @@ int pitch=0
 int time
 void main()
 {
-GRRLIB_ObjectView(480,50,10,);//this seeems good i just idk how it work
+GRRLIB_ObjectView(480,50,10,roll,pitch,yaw,1,1,1);//this seeems good i just idk how it work
 }
 
 void time()
