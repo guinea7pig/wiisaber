@@ -7,7 +7,12 @@ int pitch=0
 int time
 void main()
 {
-GRRLIB_ObjectView(480,50,10,roll,pitch,yaw,1,1,1);//this seeems good i just idk how it work
+GRRLIB_Camera3dSettings()
+GRRLIB_3dmode()g
+GRRLIB_ObjectView(480,50,10,roll,pitch,yaw,1,1,1);//i think this applys to the model drawn with gx
+GX_BEGIN()
+
+GX_END()
 }
 
 void time()
