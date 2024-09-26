@@ -20,6 +20,10 @@ void main()
 render()
 }
 
+void rectangle()
+{
+}
+
 void render()
 {
 GX_Clearvtx()//me thiks
