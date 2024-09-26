@@ -5,16 +5,21 @@ int yaw = 0
 int roll=0
 int pitch=0
 int time
-void main()
+void gxinit()
 {
 GX_INIT();
 GX_SetViewport(0, 0, 680, 480);
 GX_SetScissor(0,0,680,480)
-GXSetProjection(mtx, GX_PERSPECTIVE)
+GXSetProjection(mtx, GX_PERSPECTIVE)\
+GXSetCullMode()
 }
 
-int MAIN()
-void_render()
+int main()
+{
+gxinit()
+render()
+}
+void render()
 {
 GX_Clearvtx()//me thiks
 GX_flush()//this should send stuff to the gpu
