@@ -7,12 +7,13 @@ int pitch=0
 int time
 void main()
 {
-GX_init();
+GX_INIT();
 GX_SetViewport(0, 0, 680, 480);
 GX_SetScissor(0,0,680,480)
 GXSetProjection(mtx, GX_PERSPECTIVE)
 }
 
+int MAIN()
 void_render()
 {
 GX_Clearvtx()//me thiks
