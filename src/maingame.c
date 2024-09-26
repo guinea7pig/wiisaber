@@ -2,11 +2,12 @@
 #incude motion.h
 #include input.h
 #include <wiiuse/wpad.h>
-int yaw = 0
-int roll=0
-int pitch=0
-int time
-
+int time=0
+int saber x=0
+int saber y=0
+int saber xrot=0
+int sbaer yrot
+int saber zrot
 void grlib_init()//using grrlib for 2d elments 
 {
 Grrlib_Init()
@@ -22,31 +23,22 @@ render()
 
 void rectangle()
 {
-GRRLIB_ObjectVeiw()
-GX_BEGIN()//srarts and ends drawing 
-  
-GX_END()
+GRRLIB_DrawCube(1,true,0000ff);
+GRRLIB_ObjectViewScale(2,1,1)
+GRRLIB_ObjectVeiwTrans(saberx,sabery,saberz)//has something to do with tranlating it to screen
+GRRLIB_OBJECTVeiwRotate(saberxrot,saberyrot,saberzrot)//wimote values are in yaw picth and roll witch is annoying
+
 }
 
 void render()
 {
 GRRLIB_Render()
-}
 
 
-void time()
-
-void conversion()
-{
-roll=roll-time;//makes it slowly stop over time 
-pitch=pitch-time;
-yaw=yaw-time;
-}
-
-//converts rool yaw and pitch to angle valuses
 while(1)
-
-WPAD_SCANPADS()//forget how to format this 
+{
+WPAD_SCANPADS()//forget how to format this
+ 
 if(WPAD_ButtonsDownW $ PAD_BUTTON_HOME)
 {
 pause()
