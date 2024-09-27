@@ -3,11 +3,11 @@
 #include input.h
 #include <wiiuse/wpad.h>
 int time=0
-int saber x=0
-int saber y=0
-int saber xrot=0
-int sbaer yrot
-int saber zrot
+int saberx=0
+int sabery=0
+int saberxrot=0
+int sbaeryrot
+int saberzrot
 void grlib_init()//using grrlib for 2d elments 
 {
 Grrlib_Init()
@@ -52,9 +52,18 @@ if(ButtosDown & WPAD_BUTTON_LEFT)
 {
 saberxtot=saberxrot-1
 }
+if(ButtonsDown & WPAD_BUTTON_UP)
+{
+saberyrot=saberyrot+1
+}
+if(ButtonsDown & WPAD_BUTTON_DOWN()
+{
+saberyrot=saberyrot-1
+}
 }
 void pause()
 {
 
 }
 }
+
