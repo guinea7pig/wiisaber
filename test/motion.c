@@ -20,6 +20,7 @@ void testmotion(u32 channel)
 	orient_t* orient = motion(channel);
 	//make it print the yaw,rool and pitch vales to test
 	//hopefully grrlib supports yaw,rool and pitch for 3d objects
+        printf(orient->roll);
 	printf(orient->yaw);
 	printf(orient->pitch);			//me thinks this is how it works
 }
