@@ -17,10 +17,11 @@ void grlib_init()//using grrlib for 2d elments
 
 void debug()
 {   
-    GRRLIB_Printf(50,0,,fffff,1,saberx)//need to include image this applys to all
-    GRRLIB_Printf(50,10,,ffff,1,sabery)
-    GRRLIB_Printf(50,,20,,ffff,saberxrot)
-    GRRLIB_Printf(
+    GRRLIB_Printf(50,0,tex_BMfont3,fffff,1,saberx)//need to include image this applys to all
+    GRRLIB_Printf(50,10,tex_BMfont3,ffff,1,sabery)
+    GRRLIB_Printf(50,20,tex_BMfont3,ffff,saberxrot)
+    GRRLIB_Printf(50,30,tex_BMfont3,ffff,saberyrot)
+    GRRLIB_Printf(50,40,tex_BMfont3,ffff,saberzrot)
 }
 
 
