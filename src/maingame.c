@@ -31,12 +31,29 @@ void main()
 }
 
 void saber()
+{
     //draws saber 
     GRRLIB_DrawCube(1,true,FF2D00);
     GRRLIB_ObjectViewScale(2,1,1)
     GRRLIB_ObjectVeiwTrans(saberx,sabery,saberz)//has something to do with tranlating it to screen
     GRRLIB_OBJECTVeiwRotate(saberxrot,saberyrot,saberzrot)//wimote values are in yaw picth and roll witch is annoying
 }
+
+void bgstuff()
+{
+//this is platform that you stand on
+GRRLIB_DrawCube(1,true,0000ff);//should be black
+GRRlIB_ObjectVeiwScale(2,2,1)//again i dont know what this ia minuplating
+GRRLLIB_ObkectviewTrans()//should be  under the camera
+GRR_Draw_cube(1,true.ff2d00); //should be a bit bnigges som it like right around the edges 
+
+}
+
+void camera()
+{
+//for the positiom of the camera    
+}
+
 
 void render()
 {
