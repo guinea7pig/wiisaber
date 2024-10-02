@@ -1,5 +1,4 @@
 //stuff for the main menu
-//stuff for the main menu
 //im in socail studies rn while writing coee sep 19 10:24:20
 #include <stdio.h>
 #include <stdint.h>
@@ -85,28 +84,33 @@ int control(void)
 							cursor_y=70//next menu tex x
 							cursorstage=2
 						}
-							if(IS_PRESSED(WPAD,WIIMOTE_BUTTON_DOWN && cursor_stage==1)){
-cursor_y=70//next menu tex x
-cursorstage=2
-}
+							if(IS_PRESSED(WPAD,WIIMOTE_BUTTON_DOWN && cursor_stage==1))
+							{
+							cursor_y=70//next menu tex x
+							cursorstage=2
+				`			}
 	
 
 
-if(IS_PRESSED(WPAD,WIIMOTE_BUTTON_A && cursor_stage=0)){ //see what i mean about messy code
-//whaever intates the start
-}
+								if(IS_PRESSED(WPAD,WIIMOTE_BUTTON_A && cursor_stage=0))
+								{
+								 //see what i mean about messy code
+								//whaever intates the start
+								}
 
-if(IS_PRESSED(WPAD,WIIMOTE_BUTTON_A && cursor_stage=1)){ //see what i mean about messy code
-//settings
-}	
+									if(IS_PRESSED(WPAD,WIIMOTE_BUTTON_A && cursor_stage=1))
+									{ //see what i mean about messy code
+									//settings
+									}	
 
-if(IS_PRESSED(WPAD,WIIMOTE_BUTTON_A && cursor_stage=2)){ //see what i mean about messy code
-//quir
-}
+							if(IS_PRESSED(WPAD,WIIMOTE_BUTTON_A && cursor_stage=2))
+							{ //see what i mean about messy code
+							//quit
+							}
 }
 
 int music()
 {
-//stuff gor musinc	
+      //stuff gor musinc	
 }
 }
