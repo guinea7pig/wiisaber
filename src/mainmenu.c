@@ -1,4 +1,5 @@
 //stuff for the main menu
+//stuff for the main menu
 //im in socail studies rn while writing coee sep 19 10:24:20
 #include <stdio.h>
 #include <stdint.h>
@@ -52,33 +53,39 @@ int main(void) {
 	
 }
 
-int control(void) {
-WPAD_INIT()//this should inate wpad me think
-WPAD_SCAN	
-if(IS_PRESSED(WPAD,WIIMOTE_BUTTON_UP&&cursor_stage==0)){
-cursor_y=130//next menu tex x 
-cursorstage=0
-}
-(IS_PRESSED(WPAD,WIIMOTE_BUTTON_UP&&cursor_stage==1)){
-cursor_y=130//next menu tex x 
-cursorstage=0	
-}
+int control(void) 
+{
+	WPAD_INIT()//this should inate wpad me think
+	WPAD_SCAN	
+		if(IS_PRESSED(WPAD,WIIMOTE_BUTTON_UP&&cursor_stage==0))
+		{
+		cursor_y=130//next menu tex x 
+		cursorstage=0
+		}
+			if(IS_PRESSED(WPAD,WIIMOTE_BUTTON_UP&&cursor_stage==1))
+			{
+				cursor_y=130//next menu tex x 
+				cursorstage=0	
+			}
 
-(IS_PRESSED(WPAD,WIIMOTE_BUTTON_UP&&cursor_stage==2)){
-cursor_y=100//next menu tex x 
-cursorstage=1
-}
+ 				if(IS_PRESSED(WPAD,WIIMOTE_BUTTON_UP&&cursor_stage==2))
+				{
+				cursor_y=100//next menu tex x 
+				cursorstage=1
+	            }
 
-(IS_PRESSED(WPAD,WIIMOTE_BUTTON_DOWN && cursor_stage==0)){
-cursor_y=100//next menu tex x
-cursorstage=1
-}
+					if(IS_PRESSED(WPAD,WIIMOTE_BUTTON_DOWN && cursor_stage==0))
+					{
+						cursor_y=100//next menu tex x
+						cursorstage=1
+					}
 
-(IS_PRESSED(WPAD,WIIMOTE_BUTTON_DOWN && cursor_stage==1)){
-cursor_y=70//next menu tex x
-cursorstage=2
-}
-(IS_PRESSED(WPAD,WIIMOTE_BUTTON_DOWN && cursor_stage==1)){
+						if(IS_PRESSED(WPAD,WIIMOTE_BUTTON_DOWN && cursor_stage==1))
+						{
+							cursor_y=70//next menu tex x
+							cursorstage=2
+						}
+							if(IS_PRESSED(WPAD,WIIMOTE_BUTTON_DOWN && cursor_stage==1)){
 cursor_y=70//next menu tex x
 cursorstage=2
 }
@@ -96,5 +103,10 @@ if(IS_PRESSED(WPAD,WIIMOTE_BUTTON_A && cursor_stage=1)){ //see what i mean about
 if(IS_PRESSED(WPAD,WIIMOTE_BUTTON_A && cursor_stage=2)){ //see what i mean about messy code
 //quir
 }
-}	
+}
+
+int music()
+{
+//stuff gor musinc	
+}
 }
