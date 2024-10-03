@@ -41,17 +41,17 @@ void saber()
 
 void bgstuff()
 {
-//this is platform that you stand on
-GRRLIB_DrawCube(1,true,0000ff);//should be black
-GRRlIB_ObjectVeiwScale(2,2,1)//again i dont know what this ia minuplating
-GRRLLIB_ObkectviewTrans()//should be  under the camera
-GRR_Draw_cube(1,true.ff2d00); //should be a bit bnigges som it like right around the edges 
+    //this is platform that you stand on
+    GRRLIB_DrawCube(1,true,0000ff);//should be black
+    GRRlIB_ObjectVeiwScale(2,2,1)//again i dont know what this ia minuplating
+    GRRLLIB_ObkectviewTrans()//should be  under the camera
+    GRR_Draw_cube(1,true.ff2d00 ); //should be a bit bnigges som it like right around the edges 
 
 }
 
 void camera()
 {
-//for the positiom of the camera    
+    //for the positiom of the camera    
 }
 
 
