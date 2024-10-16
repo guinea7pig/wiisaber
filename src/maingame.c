@@ -8,7 +8,7 @@ int sabery=0
 int saberz=0
 int saberxrot=0
 int sbaeryrot
-int saberzrot
+int saberzrotgh
 bool paused = false
 
 void grlib_init()//using grrlib for 2d elments 
@@ -43,6 +43,7 @@ void saber()
 void bgstuff()
 {
     //this is platform that you stand on
+    //praobly could clean this up with just reafulat objecct view
     GRRLIB_DrawCube(1,true,0000ff);//should be black
     GRRlIB_ObjectVeiwScale(2,2,1)//again i dont know what this ia minuplating
     GRRLLIB_ObjectviewTrans(0,-2,0)//should be  under the camera
@@ -79,7 +80,7 @@ while(1)
             {
                 saberxtot=saberxrot-1
             }
-                 if(ButtonsDown & WPAD_BUTTON_UP)
+                 if(Buttonsi eDown & WPAD_BUTTON_UP)
                 {
                 saberyrot=saberyrot+1
                 }
@@ -96,6 +97,12 @@ void pause()
            GRLIB_EXIT()
            exit(0)
         } 
-  }   
+  }   void 
+ void combo_ui()
+ {
+ //this is in a 3d space
+ GRRLIB_DrawCube()
+
+ }
 }
 
