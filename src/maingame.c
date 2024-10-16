@@ -44,12 +44,13 @@ void bgstuff()
 {
     //this is platform that you stand on
     //praobly could clean this up with just reafulat objecct view
+    GRRLIB_ObjectViewBegin()
     GRRLIB_DrawCube(1,true,0000ff);//should be black
-    GRRlIB_ObjectVeiwScale(2,2,1)//again i dont know what this ia minuplating
-    GRRLLIB_ObjectviewTrans(0,-2,0)//should be  under the camera
+    GRRLIB_ObjectVeiw(0,-2,0,0,0,0,2,2,1)
     GRRLIB_Draw_cube(1,true.ff2d00 ); //should be a bit bnigges som it like right around the edges 
     GGRLIB_ObjectVeiwScale(2.5,2.5,1)//again i dont know witch onject its doing this too
-    GRRLIB_ObjectViewaTrans(0,-2,0)//also should be under camera
+    GRRLIB_ObjectViewaTrans(0,-2,0)//also should be under came
+    GRRLIB_ObjectViewEnd()
 }
 
 void camera()
