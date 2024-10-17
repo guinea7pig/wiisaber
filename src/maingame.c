@@ -49,11 +49,9 @@ void bgstuff()
     GRRLIB_DrawCube(1,true,0000ff);//should be black
     GRRLIB_ObjectViewEnd()
 
-
+    GRRLIB_ObjectView(0.-2,0,0,0,0,2.5,2.5,1);
+    GRRLIB_ObjectViewBegin() 
     GRRLIB_Draw_cube(1,true.ff2d00 ); //should be a bit bnigges som it like right around the edges 
-    GRRLIB_ObjectViewBegin()
-    GGRLIB_ObjectVeiwScale(2.5,2.5,1)//again i dont know witch onject its doing this too
-    GRRLIB_ObjectViewaTrans(0,-2,0)//also should be under came
     GRRLIB_ObjectViewEnd()
 }
 
