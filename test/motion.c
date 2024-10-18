@@ -1,3 +1,4 @@
+
 //for the motion controls
 #include <wiiuse/wpad.h>
 #include <wiiuse/wiiuse.h>
@@ -15,7 +16,9 @@ orient_t* motion(u32 channel)
 }
 
 void convert()//for conversion into stuff we can use with
+{
 
+}
 void testmotion(u32 channel)
 {
 	orient_t* orient = motion(channel);
