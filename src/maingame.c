@@ -34,10 +34,10 @@ void main()
 void saber()
 {
     //draws saber 
+    GRRLIB_ObjectVeiw(saberx,sabery,sarberz,saberxrot,saberyrot,saberzrot,2,1,1)
+   GRRLIB_ObjectViewBegin()
     GRRLIB_DrawCube(1,true,FF2D00);
-    GRRLIB_ObjectViewScale(2,1,1)
-    GRRLIB_ObjectVeiwTrans(saberx,sabery,saberz)//has something to do with tranlating it to screen
-    GRRLIB_OBJECTVeiwRotate(saberxrot,saberyrot,saberzrot)//wimote values are in yaw picth and roll witch is annoying
+    GRRLIB_ObjectViewEnd()
 }
 
 void bgstuff()
@@ -108,4 +108,5 @@ void pause()
 
  }
 }
+
 
