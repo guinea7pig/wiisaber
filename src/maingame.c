@@ -104,9 +104,11 @@ void pause()
  void combo_ui()
  {
  //this is in a 3d space
- GRRLIB_DrawCube()
-
+ //make this invible and put texture on ut
+ GRRLIB_ObjectView()
+ GRRLIB_ObjectViewBegin()
+ GRRLIB_DrawCube()//neeed to make this trasparent
+ GRRLIB_Object_VeiwEnd()
  }
 }
-
 
