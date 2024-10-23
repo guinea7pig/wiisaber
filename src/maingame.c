@@ -107,11 +107,11 @@ void pause()
  //make this invible and put texture on ut
  GRRLIB_ObjectView()
  GRRLIB_ObjectViewBegin()
- GRRLIB_DrawCube()//neeed to make this trasparent
+ GRRLIB_DrawImgQuad()//neeed to make this trasparent
  GRRLIB_Object_VeiwEnd()
 
- GRRLIB_teximg()//put combo texure me thinks we can use the texture for that
+ //put combo texure me thinks we can use the texture for that
+ //wait i should praobaly ise a img qaud actully idk
+ //need to laod textures
  }
 }
-
-
