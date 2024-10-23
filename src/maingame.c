@@ -109,6 +109,9 @@ void pause()
  GRRLIB_ObjectViewBegin()
  GRRLIB_DrawCube()//neeed to make this trasparent
  GRRLIB_Object_VeiwEnd()
+
+ GRRLIB_teximg()//put combo texure me thinks we can use the texture for that
  }
 }
+
 
