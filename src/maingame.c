@@ -42,6 +42,7 @@ void saber()
 
 void bgstuff()
 {
+    GRRLIB_SetBackroundColour(0,0,0)
     //this is platform that you stand on
     //praobly could clean this up with just reafulat objecct view
     GRRLIB_ObjectVeiw(0,-2,0,0,0,0,2,2,1)
@@ -102,12 +103,14 @@ void pause()
         } 
   }   void 
  void combo_ui()
- {
+// i completly dont know what im going
+ GRRLIB_teximg()//
  //this is in a 3d space
  //make this invible and put texture on ut
  GRRLIB_ObjectView()
  GRRLIB_ObjectViewBegin()
- GRRLIB_DrawImgQuad(COMBO.png)//neeed to make this trasparent
+ //neeed to load texture
+ GRRLIB_DrawImgQuad(combo.png)//neeed to make this trasparent
  GRRLIB_Object_VeiwEnd()
 
  //put combo texure me thinks we can use the texture for that
