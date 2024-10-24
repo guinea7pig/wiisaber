@@ -107,7 +107,7 @@ void pause()
  //make this invible and put texture on ut
  GRRLIB_ObjectView()
  GRRLIB_ObjectViewBegin()
- GRRLIB_DrawImgQuad()//neeed to make this trasparent
+ GRRLIB_DrawImgQuad(COMBO.png)//neeed to make this trasparent
  GRRLIB_Object_VeiwEnd()
 
  //put combo texure me thinks we can use the texture for that
@@ -115,3 +115,4 @@ void pause()
  //need to laod textures
  }
 }
+
