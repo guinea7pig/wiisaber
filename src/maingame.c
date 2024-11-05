@@ -1,43 +1,41 @@
-#include grrlib.h
-#include motion.h
-#include input.h
+#include <grrlib.h> 
 #include <wiiuse/wpad.h>
-int time=0
-int saberx=0
-int sabery=0
-int saberz=0
-int saberxrot=0
-int sbaeryrot
-int saberzrotghx
-bool paused = false
+int saberx=0;
+int sabery=0;
+int saberz=0;
+int saberxrot=0;
+int saberyrot;
+int saberzrot;
+bool paused = false;
 
-void grlib_init()//using grrlib for 2d elments 
+void grlib_init() 
 {
-    Grrlib_Init()
+    Grrlib_Init();
 }
 
 void debug()
 {   
-    GRRLIB_Printf(50,0,tex_BMfont3,fffff,1,saberx)//need to include image this applys to all
-    GRRLIB_Printf(50,10,tex_BMfont3,ffff,1,sabery)
-    GRRLIB_Printf(50,20,tex_BMfont3,ffff,saberxrot)
-    GRRLIB_Printf(50,30,tex_BMfont3,ffff,saberyrot)
-    GRRLIB_Printf(50,40,tex_BMfont3,ffff,saberzrot)
+   GRRLIB_texImg *tex_BMfont3_png = GRRLIB_LoadTexture(tex_BMfont3_png);
+    GRRLIB_Printf(50,0,tex_BMfont3_png,255,255,255,0.8,1,saberx);
+    GRRLIB_Printf(50,10,tex_BMfont3_png,255,255,255,0.8,1,sabery);
+    GRRLIB_Printf(50,20,tex_BMfont3_png,255,255,255,0.8,saberxrot);
+    GRRLIB_Printf(50,30,tex_BMfont3_png,255,255,255,0.8,saberyrot);
+    GRRLIB_Printf(50,40,tex_BMfont3_png,255,255,255,0.8,saberzrot);
 }
 
 
 void main()
 {
-    render()
+    render();
 }
 
 void saber()
 {
     //draws saber 
-    GRRLIB_ObjectVeiw(saberx,sabery,sarberz,saberxrot,saberyrot,saberzrot,2,1,1)
-   GRRLIB_ObjectViewBegin()
-    GRRLIB_DrawCube(1,true,FF2D00);
-    GRRLIB_ObjectViewEnd()
+    GRRLIB_ObjectVeiw(saberx,sabery,saberz,saberxrot,saberyrot,saberzrot,2,1,1);
+   GRRLIB_ObjectViewBegin();
+    GRRLIB_DrawCube(1,true,00000);
+    GRRLIB_ObjectViewEnd();
 }
 
 void bgstuff()
@@ -45,26 +43,26 @@ void bgstuff()
     GRRLIB_SetBackroundColour(0,0,0)
     //this is platform that you stand on
     //praobly could clean this up with just reafulat objecct view
-    GRRLIB_ObjectVeiw(0,-2,0,0,0,0,2,2,1)
-    GRRLIB_ObjectViewBegin()
-    GRRLIB_DrawCube(1,true,0000ff);//should be black
-    GRRLIB_ObjectViewEnd()
+    GRRLIB_ObjectVeiw(0,-2,0,0,0,0,2,2,1);
+    GRRLIB_ObjectViewBegin();
+    GRRLIB_DrawCube(1,true,000000);//should be black
+    GRRLIB_ObjectViewEnd();
 
     GRRLIB_ObjectView(0.-2,0,0,0,0,2.5,2.5,1);
-    GRRLIB_ObjectViewBegin() 
-    GRRLIB_Draw_cube(1,true.ff2d00 ); //should be a bit bnigges som it like right around the edges 
-    GRRLIB_ObjectViewEnd()
+    GRRLIB_ObjectViewBegin(); 
+    GRRLIB_Draw_cube(1,true,00000 ); //should be a bit bnigges som it like right around the edges 
+    GRRLIB_ObjectViewEnd();
 }
 
 void camera()
 {
-GRRLIB_Camera3dSettings(0,0,-1,0,0,0,0,0,0)
+GRRLIB_Camera3dSettings(0,0,-1,0,0,0,0,0,0);
 }
 
 
 void render()
 {
-    GRRLIB_Render()
+    GRRLIB_Render();
 }
 
 while(1)
@@ -117,5 +115,4 @@ void pause()
  //wait i should praobaly ise a img qaud actully idk
  //need to laod textures
  }
-}
 

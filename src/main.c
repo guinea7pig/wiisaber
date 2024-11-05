@@ -28,9 +28,10 @@ int main(void) {
 	
     	load_img(); // called from imgload.h
 
-   	GRRLIB_texImg *tex_BMfont4 = GRRLIB_LoadTexture(/* add own texture here */);
-	GRRLIB_LoadTTFFromFile(assets/BeonMedium-7Z34.ttf);
-
+   	GRRLIB_texImg *tex_BMfont3_png = GRRLIB_LoadTexture(tex_BMfont3_png);
+        GRRLIB_ttfFont *BeonMedium7Z34_ttf = GRRLIB_LoadTTFFromFile(BeonMedium7Z34_ttf)
+;
+ 
 
     	while(1) {
 
@@ -43,25 +44,25 @@ int main(void) {
 	    
 	/* image loading is handled from "imgload.h" */
 	
-		GRRLIB_SetBackgroundColour(0x000000FF); 		//should be rgba
+		GRRLIB_SetBackgroundColour(0,0,0,0); 		//should be rgba
 	        
 		GRRLIB_PrintfTTF(5,
 			0,
-			BeonMedium-7Z34.ttf
+			BeonMedium7Z34_ttf
 			,"beon font test",
 			1,
 			WHITE); //difrnt order of thing from reagular print wired
 
  		GRRLIB_Printf(5, 
 			25,
-			tex_BMfont3,
+			tex_BMfont3_png,
 			WHITE, 
 			1,
 		 	"wiisaber is a clone of beatsaber ");
 
 	    	GRRLIB_Printf(5, 
 			0,
-			tex_BMfont3,
+			tex_BMfont3_png,
 			WHITE, 
 			1,
 			"© toadrage and guinea7pig 2024"); // Might replace this with a license boilerplate.

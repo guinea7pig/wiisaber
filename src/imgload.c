@@ -15,7 +15,7 @@ void load_img(void) {
 
 	*/
 
-	GRRLIB_texIMG *BMfont3_png = GRRLIB_LoadTextureFromFile(/* I still don't know whether they want a filename or a path. */);
-	GRRLIB_texIMG pixil-frame-0.png = GRRLIB_LoadTextureFromFile()
+	GRRLIB_texImg *BMfont3_png =GRRLIB_LoadTextureFromFile(BMfont3_png);
+	GRRLIB_texImg *pointer_png = GRRLIB_LoadTextureFromFile(pointer_png); 
 
 }
