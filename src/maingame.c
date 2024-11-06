@@ -24,9 +24,10 @@ void debug()
 }
 
 
-void main()
+void eeee()
 {
-    render();
+   control();
+   render();
 }
 
 void saber()
@@ -40,7 +41,7 @@ void saber()
 
 void bgstuff()
 {
-    GRRLIB_SetBackroundColour(0,0,0)
+    GRRLIB_SetBackroundColour(0,0,0);
     //this is platform that you stand on
     //praobly could clean this up with just reafulat objecct view
     GRRLIB_ObjectVeiw(0,-2,0,0,0,0,2,2,1);
@@ -48,7 +49,7 @@ void bgstuff()
     GRRLIB_DrawCube(1,true,000000);//should be black
     GRRLIB_ObjectViewEnd();
 
-    GRRLIB_ObjectView(0.-2,0,0,0,0,2.5,2.5,1);
+    GRRLIB_ObjectView(0,-2,0,0,0,0,2.5,2.5,1);
     GRRLIB_ObjectViewBegin(); 
     GRRLIB_Draw_cube(1,true,00000 ); //should be a bit bnigges som it like right around the edges 
     GRRLIB_ObjectViewEnd();
@@ -65,54 +66,53 @@ void render()
     GRRLIB_Render();
 }
 
+void control()
+{
 while(1)
 {
-    u32 buttonsDown = WPAD_ButtonsDown();
-    WPAD_SCANPADS()//forget how to format this
+    u32 ButtonsDown = WPAD_ButtonsDown(0);
+    WPAD_SCANPADS();//forget how to format this
  
     if(ButtonsDown & WPAD_BUTTON_HOME)
     {
-        pause()
+        pause();
     }
         if(ButtonsDown & WPAD_BUTTON_RIGHT)   //making sure it actlly it actlully roatess befor motion controls 
         {
-            saberxrot=saberxrot+1
+            saberxrot=saberxrot+1;
         }
-             if(ButtosDown & WPAD_BUTTON_LEFT)
+             if(ButtonsDown & WPAD_BUTTON_LEFT)
             {
-                saberxtot=saberxrot-1
+                saberxrot=saberxrot-1;
             }
-                 if(Buttonsi eDown & WPAD_BUTTON_UP)
+                 if(ButtonsDown & WPAD_BUTTON_UP)
                 {
-                saberyrot=saberyrot+1
+                saberyrot=saberyrot+1;
                 }
 
             if(ButtonsDown & WPAD_BUTTON_DOWN)
             {
-             saberyrot=saberyroty-1
+             saberyrot=saberyrot-1;
             }
+    if(ButtonsDown & WPAD_BUTTON_HOME && paused == true);
+        {
+           GRLIB_EXIT();
+           exit(0);
+        } 
+}
 void pause()
   {
-    puased= true //need to ad something where it freezes game 
-        if(ButtonsDown & WPAD_BUTTON_HOME && pause=true)
-        {
-           GRLIB_EXIT()
-           exit(0)
-        } 
-  }   void 
+    paused = true; //need to ad something where it freezes game 
+  }   
  void combo_ui()
+{
 // i completly dont know what im going
- GRRLIB_teximg()//
  //this is in a 3d space
- //make this invible and put texture on ut
- GRRLIB_ObjectView()
- GRRLIB_ObjectViewBegin()
- //neeed to load texture
- GRRLIB_DrawImgQuad(combo.png)//neeed to make this trasparent
- GRRLIB_Object_VeiwEnd()
+ //make this later 
 
  //put combo texure me thinks we can use the texture for that
  //wait i should praobaly ise a img qaud actully idk
  //need to laod textures
+ }
  }
 
