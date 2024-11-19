@@ -28,9 +28,9 @@ int main(void) {
 	
     	load_img(); // called from imgload.h
 
-   	GRRLIB_texImg *tex_BMfont3_png = GRRLIB_LoadTexture(tex_BMfont3_png);
-        GRRLIB_ttfFont *BeonMedium7Z34_ttf = GRRLIB_LoadTTFFromFile(BeonMedium7Z34_ttf)
-;
+   	GRRLIB_texImg *tex_BMfont3_png = GRRLIB_LoadTexture("tex_BMfont3_png");
+    GRRLIB_ttfFont *BeonMedium7Z34_ttf = GRRLIB_LoadTTFFromFile("BeonMedium7Z34_ttf");
+
  
 
     	while(1) {

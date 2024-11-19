@@ -1,5 +1,8 @@
 #include <grrlib.h> 
 #include <wiiuse/wpad.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <stdint.h>
 int saberx=0;
 int sabery=0;
 int saberz=0;
@@ -8,14 +11,15 @@ int saberyrot;
 int saberzrot;
 bool paused = false;
 
-void grlib_init() 
+void eeee()
 {
-    Grrlib_Init();
+    GRRLIB_Init();
+    GRRLIB_Render();
 }
 
 void debug()
 {   
-   GRRLIB_texImg *tex_BMfont3_png = GRRLIB_LoadTexture(tex_BMfont3_png);
+   GRRLIB_texImg *tex_BMfont3_png = GRRLIB_LoadTexture("tex_BMfont3_png");
     GRRLIB_Printf(50,0,tex_BMfont3_png,255,255,255,0.8,1,saberx);
     GRRLIB_Printf(50,10,tex_BMfont3_png,255,255,255,0.8,1,sabery);
     GRRLIB_Printf(50,20,tex_BMfont3_png,255,255,255,0.8,saberxrot);
@@ -24,16 +28,10 @@ void debug()
 }
 
 
-void eeee()
-{
-   control();
-   render();
-}
-
 void saber()
 {
     //draws saber 
-    GRRLIB_ObjectVeiw(saberx,sabery,saberz,saberxrot,saberyrot,saberzrot,2,1,1);
+    GRRLIB_ObjectView(saberx,sabery,saberz,saberxrot,saberyrot,saberzrot,2,1,1);
    GRRLIB_ObjectViewBegin();
     GRRLIB_DrawCube(1,true,00000);
     GRRLIB_ObjectViewEnd();
@@ -41,17 +39,17 @@ void saber()
 
 void bgstuff()
 {
-    GRRLIB_SetBackroundColour(0,0,0);
+    GRRLIB_SetBackgroundColour(0,0,0,0);
     //this is platform that you stand on
     //praobly could clean this up with just reafulat objecct view
-    GRRLIB_ObjectVeiw(0,-2,0,0,0,0,2,2,1);
+    GRRLIB_ObjectView(0,-2,0,0,0,0,2,2,1);
     GRRLIB_ObjectViewBegin();
     GRRLIB_DrawCube(1,true,000000);//should be black
     GRRLIB_ObjectViewEnd();
 
     GRRLIB_ObjectView(0,-2,0,0,0,0,2.5,2.5,1);
     GRRLIB_ObjectViewBegin(); 
-    GRRLIB_Draw_cube(1,true,00000 ); //should be a bit bnigges som it like right around the edges 
+    GRRLIB_DrawCube(1,true,00000 ); //should be a bit bnigges som it like right around the edges 
     GRRLIB_ObjectViewEnd();
 }
 
@@ -61,21 +59,16 @@ GRRLIB_Camera3dSettings(0,0,-1,0,0,0,0,0,0);
 }
 
 
-void render()
-{
-    GRRLIB_Render();
-}
-
 void control()
 {
 while(1)
 {
     u32 ButtonsDown = WPAD_ButtonsDown(0);
-    WPAD_SCANPADS();//forget how to format this
+    WPAD_ScanPads();//forget how to format this
  
     if(ButtonsDown & WPAD_BUTTON_HOME)
     {
-        pause();
+       //NEED TO ADD PUSE FUNCTION HERE
     }
         if(ButtonsDown & WPAD_BUTTON_RIGHT)   //making sure it actlly it actlully roatess befor motion controls 
         {
@@ -96,7 +89,7 @@ while(1)
             }
     if(ButtonsDown & WPAD_BUTTON_HOME && paused == true);
         {
-           GRLIB_EXIT();
+           GRRLIB_Exit();
            exit(0);
         } 
 }
