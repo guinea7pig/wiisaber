@@ -10,14 +10,12 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
-// #include <malloc.h>
+#include <malloc.h>
 
 #include <grrlib.h>
 #include <wiiuse/wpad.h>
 
-#define WHITE 0xFFFF
-
-#include "imgload.h"  //do in need to put my font png there
+#define WHITE  //do in need to put my font png there
 		      // I would do that if I were you. - Toad
 
 int main(void) {
@@ -26,10 +24,9 @@ int main(void) {
 
 	WPAD_Init();
 	
-    	load_img(); // called from imgload.h
 
-   	GRRLIB_texImg *tex_BMfont3_png = GRRLIB_LoadTexture("tex_BMfont3_png");
-    GRRLIB_ttfFont *BeonMedium7Z34_ttf = GRRLIB_LoadTTFFromFile("BeonMedium7Z34_ttf");
+    GRRLIB_texImg *tex_BMfont3_png = GRRLIB_LoadTexture("tex_BMfont3_png");
+    GRRLIB_ttfFont *myFont  = GRRLIB_LoadTTFFromFile("BeonMedium7Z34_ttf");
 
  
 
@@ -46,33 +43,18 @@ int main(void) {
 	
 		GRRLIB_SetBackgroundColour(0,0,0,0); 		//should be rgba
 	        
-		GRRLIB_PrintfTTF(5,
-			0,
-			BeonMedium7Z34_ttf
-			,"beon font test",
-			1,
-			WHITE); //difrnt order of thing from reagular print wired
+		GRRLIB_PrintfTTF(5,0,BeonMedium7Z34_ttf,"beon font test",1,WHITE); //difrnt order of thing from reagular print wired
 
- 		GRRLIB_Printf(5, 
-			25,
-			tex_BMfont3_png,
-			WHITE, 
-			1,
-		 	"wiisaber is a clone of beatsaber ");
+ 		GRRLIB_Printf(5,25,tex_BMfont3_png,WHITE,1,"wiisaber is a clone of beatsaber ");
 
-	    	GRRLIB_Printf(5, 
-			0,
-			tex_BMfont3_png,
-			WHITE, 
-			1,
-			"© toadrage and guinea7pig 2024"); // Might replace this with a license boilerplate.
+	    	GRRLIB_Printf(5,0,tex_BMfont3_png,WHITE,1,"© toadrage and guinea7pig 2024"); // Might replace this with a license boilerplate.
 
          
 		GRRLIB_Render();  // Render the frame buffer to the screen
 	    
    	}
 
-    	GRRLIB_Exit(); 	// Be a good boy, clear the memory allocated by GRRLIB
+    //this should be after the usere presss the power button	GRRLIB_Exit(); 	// Be a good boy, clear the memory allocated by GRRLIB
 
     exit(0);  // Use exit() to exit a program, do not use 'return' from main()
 	
