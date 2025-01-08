@@ -33,11 +33,12 @@ int main(void) {
     	while(1) {
 
         	WPAD_ScanPads();  // Scan the Wiimotes
-
         // If HOME was pressed on a Wiimote, break out of the loop
         	if (WPAD_ButtonsDown(0) & WPAD_BUTTON_HOME) {
 		 	exit(1);
+                        GRRLIB_EXIT()
 		}
+              }
 	    
 	/* image loading is handled from "imgload.h" */
 	
@@ -54,8 +55,4 @@ int main(void) {
 	    
    	}
 
-    //this should be after the usere presss the power button	GRRLIB_Exit(); 	// Be a good boy, clear the memory allocated by GRRLIB
-
-    exit(0);  // Use exit() to exit a program, do not use 'return' from main()
-	
-}
+    
