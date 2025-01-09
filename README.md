@@ -1,3 +1,3 @@
 a wii port of beatsaber. 
-now is the main project for siiiaber
+ is the side  project for siiiaber
 reguired to compile  wiiuse and grrlib.
