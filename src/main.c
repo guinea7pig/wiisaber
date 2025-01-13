@@ -1,4 +1,4 @@
-/*
+
 	
 	main.c - Main source file.
 
@@ -15,7 +15,7 @@
 #include <grrlib.h>
 #include <wiiuse/wpad.h>
 
-#define WHITE  //do in need to put my font png there
+#define WHITE 0xFFFFFFFF  //do in need to put my font png there
 		      // I would do that if I were you. - Toad
 
 int main(void) {
@@ -25,8 +25,8 @@ int main(void) {
 	WPAD_Init();
 	
 
-    GRRLIB_texImg *tex_BMfont3_png = GRRLIB_LoadTexture("tex_BMfont3_png");
-    GRRLIB_ttfFont *myFont  = GRRLIB_LoadTTFFromFile("BeonMedium7Z34_ttf");
+    GRRLIB_texImg *BMfont_png = GRRLIB_LoadTexture("BMfont_png");
+    GRRLIB_ttfFont *beonttf  = GRRLIB_LoadTTFFromFile("beonttf");
 
  
 
@@ -36,7 +36,7 @@ int main(void) {
         // If HOME was pressed on a Wiimote, break out of the loop
         	if (WPAD_ButtonsDown(0) & WPAD_BUTTON_HOME) {
 		 	exit(1);
-                        GRRLIB_EXIT()
+                        GRRLIB_Exit()
 		}
               }
 	    
@@ -44,15 +44,13 @@ int main(void) {
 	
 		GRRLIB_SetBackgroundColour(0,0,0,0); 		//should be rgba
 	        
-		GRRLIB_PrintfTTF(5,0,BeonMedium7Z34_ttf,"beon font test",1,WHITE); //difrnt order of thing from reagular print wired
+		GRRLIB_PrintfTTF(5,0,beon_ttf,"beon font test",1,WHITE); //difrnt order of thing from reagular print wired
 
- 		GRRLIB_Printf(5,25,tex_BMfont3_png,WHITE,1,"wiisaber is a clone of beatsaber ");
+ 		GRRLIB_Printf(5,25,BMfont_png,WHITE,1,"wiisaber is a clone of beatsaber ");
 
-	    	GRRLIB_Printf(5,0,tex_BMfont3_png,WHITE,1,"© toadrage and guinea7pig 2024"); // Might replace this with a license boilerplate.
+	    	GRRLIB_Printf(5,0,_BMfont_png,WHITE,1,"© toadrage and guinea7pig 2024"); // Might replace this with a license boilerplate.
 
          
 		GRRLIB_Render();  // Render the frame buffer to the screen
 	    
    	}
-
-    
