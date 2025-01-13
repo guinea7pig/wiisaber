@@ -1,4 +1,3 @@
-
 	
 	main.c - Main source file.
 
@@ -36,7 +35,7 @@ int main(void) {
         // If HOME was pressed on a Wiimote, break out of the loop
         	if (WPAD_ButtonsDown(0) & WPAD_BUTTON_HOME) {
 		 	exit(1);
-                        GRRLIB_Exit()
+                        GRRLIB_Exit();
 		}
               }
 	    
@@ -44,13 +43,15 @@ int main(void) {
 	
 		GRRLIB_SetBackgroundColour(0,0,0,0); 		//should be rgba
 	        
-		GRRLIB_PrintfTTF(5,0,beon_ttf,"beon font test",1,WHITE); //difrnt order of thing from reagular print wired
+		GRRLIB_PrintfTTF(5,0,beonttf,"beon font test",1,WHITE); //difrnt order of thing from reagular print wired
 
  		GRRLIB_Printf(5,25,BMfont_png,WHITE,1,"wiisaber is a clone of beatsaber ");
 
-	    	GRRLIB_Printf(5,0,_BMfont_png,WHITE,1,"© toadrage and guinea7pig 2024"); // Might replace this with a license boilerplate.
+	    	GRRLIB_Printf(5,0,BMfont_png,WHITE,1,"© toadrage and guinea7pig 2024"); // Might replace this with a license boilerplate.
 
          
 		GRRLIB_Render();  // Render the frame buffer to the screen
 	    
    	}
+
+    
