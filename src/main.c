@@ -1,3 +1,4 @@
+*
 	
 	main.c - Main source file.
 
@@ -10,7 +11,8 @@
 #include <stdint.h>
 #include <stdlib.h>
 #include <malloc.h>
-
+#include <BMfont3_png.h>
+#inlude <combo_png.h> 
 #include <grrlib.h>
 #include <wiiuse/wpad.h>
 
@@ -35,7 +37,7 @@ int main(void) {
         // If HOME was pressed on a Wiimote, break out of the loop
         	if (WPAD_ButtonsDown(0) & WPAD_BUTTON_HOME) {
 		 	exit(1);
-                        GRRLIB_Exit();
+                        GRRLIB_Exit()
 		}
               }
 	    
