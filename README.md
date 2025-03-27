@@ -1,3 +1,1 @@
-a wii port of beatsaber. 
- is the side  project for siiiaber
-reguired to compile  wiiuse and grrlib.
+use this as a place to test grrlib functoins before they go in saiiber
