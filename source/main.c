@@ -10,9 +10,7 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
-#include <malloc.h>
-#include <BMfont3_png.h>
-#include <combo_png.h> 
+#include <malloc.h> 
 #include <grrlib.h>
 #include <wiiuse/wpad.h>
 
@@ -26,11 +24,6 @@ int main(void) {
 	WPAD_Init();
 	
 
-    GRRLIB_texImg *BMfont_png = GRRLIB_LoadTexture("BMfont_png");
-    GRRLIB_ttfFont *beonttf  = GRRLIB_LoadTTFFromFile("beonttf");
-
- 
-
     	while(1) {
 
         	WPAD_ScanPads();  // Scan the Wiimotes
@@ -43,15 +36,7 @@ int main(void) {
 	    
 	/* image loading is handled from "imgload.h" */
 	
-		GRRLIB_SetBackgroundColour(0,0,0,0); 		//should be rgba
-	        
-		//GRRLIB_PrintfTTF(5,0,beonttf,"beon font test",1,WHITE); 
-
- 		GRRLIB_Printf(5,25,BMfont_png,WHITE,1,"wiisaber is a clone of beatsaber ");
-
-	    	GRRLIB_Printf(5,0,BMfont_png,WHITE,1,"© toadrage and guinea7pig 2024"); // Might replace this with a license boilerplate.
-
-         
+		GRRLIB_SetBackgroundColour(0,0,0,0); 		//should be rgb         
 		GRRLIB_Render();  // Render the frame buffer to the screen
 	    
    	}
