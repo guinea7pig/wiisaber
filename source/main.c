@@ -30,7 +30,7 @@ int main(void) {
         // If HOME was pressed on a Wiimote, break out of the loop
         	if (WPAD_ButtonsDown(0) & WPAD_BUTTON_HOME) {
 		 	exit(1);
-                        GRRLIB_Exit()
+                        GRRLIB_Exit();
 		}
               }
 	    
