@@ -14,14 +14,16 @@
 #include <grrlib.h>
 #include <wiiuse/wpad.h>
 
-#define WHITE 0xFFFFFFFF  //do in need to put my font png there
-		      // I would do that if I were you. - Toad
+void init()
+    {
+	WPAD_Init;
+	GRRLIB_Init;	
+	}
 
 int main(void) {
-    	// Initialise the Graphics & Video subsystems
-	GRRLIB_Init();
+// Initialise the Graphics & Video subsystems
+    init();
 
-	WPAD_Init();
 	
 
     	while(1) {
@@ -38,7 +40,8 @@ int main(void) {
 	
 		GRRLIB_SetBackgroundColour(0,0,0,0); 		//should be rgb         
 		GRRLIB_Render();  // Render the frame buffer to the screen
-	    
    	}
+
+	
 
     
